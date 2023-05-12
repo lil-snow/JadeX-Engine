@@ -2,6 +2,8 @@
 	"files.associations": {
 		"jadex.h": "c",
 		"logger.h": "c",
-		"base.h": "c"
+		"base.h": "c",
+		"system_error": "c",
+		"ostream": "c"
 	}
 }

@@ -13,6 +13,12 @@
 #error JDX_FALSE may not be redefined
 #endif
 
+#ifndef JX_STRUCT_TYPEDEF
+#define JX_STRUCT_TYPEDEF(x) typedef struct __##x x; typedef struct __##x* ##x_p;
+#else
+#error JX_STRUCT_TYPEDEF may not be redefined
+#endif
+
 #include <stdlib.h>
 
 typedef char			i8;

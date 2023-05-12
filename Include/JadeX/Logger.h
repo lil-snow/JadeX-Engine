@@ -23,15 +23,17 @@ struct __JXLogger
 typedef struct __JXLogger JXLogger;
 typedef struct __JXLogger* JXLogger_p;
 
-JXLogger_p 		JXLoggerAllocPointer 	();
-JXResult 		JXLoggerInit			(JXLogger_p logger, str name);
-JXLogSeverity 	JXLoggerGetSeverity		(const JXLogger_p logger);
-JXResult		JXLoggerSetSeverity		(JXLogger_p logger, JXLogSeverity severity);
-JXResult 		JXLoggerTrace			(const JXLogger_p logger, str_c message, ...);
-JXResult 		JXLoggerInfo			(const JXLogger_p logger, str_c message, ...);
-JXResult 		JXLoggerDebug			(const JXLogger_p logger, str_c message, ...);
-JXResult 		JXLoggerWarn			(const JXLogger_p logger, str_c message, ...);
-JXResult 		JXLoggerError			(const JXLogger_p logger, str_c message, ...);
-JXResult 		JXLoggerFatal			(const JXLogger_p logger, str_c message, ...);
+JXLogger_p 		JXLoggerAllocPointer 				();
+JXResult 		JXLoggerInitConsoleLoggerPointer	(JXLogger_p logger, str name);
+JXResult 		JXLoggerInitFileLoggerPointer		(JXLogger_p logger, str name);
+JXLogSeverity 	JXLoggerGetSeverity					(const JXLogger_p logger);
+JXResult		JXLoggerSetSeverity					(JXLogger_p logger, JXLogSeverity severity);
+JXResult 		JXLoggerTrace						(const JXLogger_p logger, str_c message, ...);
+JXResult 		JXLoggerInfo						(const JXLogger_p logger, str_c message, ...);
+JXResult 		JXLoggerDebug						(const JXLogger_p logger, str_c message, ...);
+JXResult 		JXLoggerWarn						(const JXLogger_p logger, str_c message, ...);
+JXResult 		JXLoggerError						(const JXLogger_p logger, str_c message, ...);
+JXResult 		JXLoggerFatal						(const JXLogger_p logger, str_c message, ...);
+JXResult		JXLoggerDestroy						(const JXLogger_p logger);
 
 #endif
