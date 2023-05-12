@@ -1,0 +1,3 @@
+C:/Engine/Nebula Engine/CMakeFiles/JadeX.dir
+C:/Engine/Nebula Engine/CMakeFiles/edit_cache.dir
+C:/Engine/Nebula Engine/CMakeFiles/rebuild_cache.dir

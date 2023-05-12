@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"jadex.h": "c",
+		"logger.h": "c",
+		"base.h": "c"
+	}
+}
