@@ -3,12 +3,11 @@
 
 int main(char** argc, int argv)
 {
-	JXLoggerInit();
-	JXLogger_p logger = JXLoggerAllocPointer();
-	JXLoggerInitPointer(logger, "CoreLogger");
+	JXConsoleLogger_p logger = JXConsoleLoggerAllocPointer();
+	JXConsoleLoggerInitPointer(logger, "CoreLogger");
 	
-	u32 i = 0;
-	JXLoggerTrace(logger, "This is a trace message");
+	u32 i = 32;
+	JXConsoleLoggerTrace(logger, "This is a trace message Value = %i", i);
 
-	JXLoggerDestroy(logger);
+	JXConsoleLoggerDestroyPointer(logger);
 }

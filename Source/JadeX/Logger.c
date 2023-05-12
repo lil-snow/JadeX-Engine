@@ -41,6 +41,20 @@ str JXFormatMessage(str_c message, ...)
 	return msg;
 }
 
+str JXGetSeverityAsString(JXLogSeverity severity)
+{
+	switch (severity)
+	{
+		case JX_SEVERITY_TRACE: return "TRACE";
+		case JX_SEVERITY_INFO: return "INFO";
+		case JX_SEVERITY_DEBUG: return "DEBUG";
+		case JX_SEVERITY_WARNING: return "WARNING";
+		case JX_SEVERITY_ERROR: return "ERROR";
+		case JX_SEVERITY_FATAL: return "FATAL";
+		default: return "";
+	}
+}
+
 str JXGetTimeAsString()
 {
 	time_t now = time(NULL);
@@ -49,128 +63,156 @@ str JXGetTimeAsString()
 	return timestamp;
 }
 
-JXLogger_p JXLoggerAllocPointer()
+str JXGetLogMessage(JXLoggerData_p data, JXLogSeverity severity, str_c outputColor, str_c message, va_list args)
 {
-	return (JXLogger_p) malloc(sizeof(JXLogger));
+	if (message == NULL)
+		return NULL;
+
+	if (data->name == NULL)
+		return NULL;
+
+	if (data->severity > severity)
+		return NULL;
+
+	char* severityStr 	= JXGetSeverityAsString	(severity);
+	char* timeStr 		= JXGetTimeAsString		();
+	char* msg			= JXFormatMessageArgs(message, args);	
+
+	return JXFormatMessage("%s[%s] [%s] %s >> %s\033[0m", outputColor, timeStr, data->name, severityStr, msg);
 }
 
-JXResult JXLoggerInitPointer(JXLogger_p logger, str name)
+JXConsoleLogger_p JXConsoleLoggerAllocPointer()
 {
-	
-	logger->name = name;
-	logger->severity = JX_SEVERITY_ALL;
-	logger->writer = &s_DefaultOutputStream;
+	return (JXConsoleLogger_p) malloc(sizeof(JXConsoleLogger));
+}
+
+JXResult JXConsoleLoggerInitPointer(JXConsoleLogger_p logger, str name)
+{
+	logger->data.name = name;
+	logger->data.severity = JX_SEVERITY_ALL;
 
 	return JX_TRUE;
 }
 
-JXLogSeverity JXLoggerGetSeverity(const JXLogger_p logger)
+JXLogSeverity JXConsoleLoggerGetSeverity(const JXConsoleLogger_p logger)
 {
-	return logger->severity;
+	return logger->data.severity;
 }
 
-JXResult JXLoggerSetSeverity(JXLogger_p logger, JXLogSeverity severity)
+JXResult JXConsoleLoggerSetSeverity(JXConsoleLogger_p logger, JXLogSeverity severity)
 {
-	logger->severity = severity;
+	logger->data.severity = severity;
 }
 
-JXResult JXLoggerTrace(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerTrace(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage("%s[%s] TRACE >> %s%s", JX_OUTPUT_COLOR_PURPLE, logger->name, JXFormatMessageArgs(message, list), JX_OUTPUT_COLOR_RESET);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_TRACE, JX_OUTPUT_COLOR_PURPLE, message, list);
 	va_end(list);
 
-	logger->writer->write(msg);
+	if (msg == NULL)
+		return JX_FALSE;
+
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerInfo(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerInfo(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage(message, list);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_INFO, JX_OUTPUT_COLOR_BLUE, message, list);
 	va_end(list);
 
-	printf("%s[%s] INFO >> %s%s\n", JX_OUTPUT_COLOR_BLUE, logger->name, msg, JX_OUTPUT_COLOR_RESET);
+	if (msg == NULL)
+		return JX_FALSE;
+
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerDebug(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerDebug(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage(message, list);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_DEBUG, JX_OUTPUT_COLOR_GREEN, message, list);
 	va_end(list);
 
-	printf("%s[%s] DEBUG >> %s%s\n", JX_OUTPUT_COLOR_GREEN, logger->name, msg, JX_OUTPUT_COLOR_RESET);
+	if (msg == NULL)
+		return JX_FALSE;
+
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerWarn(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerWarn(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage(message, list);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_WARNING, JX_OUTPUT_COLOR_YELLOW, message, list);
 	va_end(list);
 
-	char* time = JXGetTimeAsString();
+	if (msg == NULL)
+		return JX_FALSE;
 
-	printf("%s[%s] [WARNING] %s >> %s%s\n", JX_OUTPUT_COLOR_YELLOW, time, logger->name, msg, JX_OUTPUT_COLOR_RESET);
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerError(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerError(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage(message, list);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_ERROR, JX_OUTPUT_COLOR_RED, message, list);
 	va_end(list);
 
-	char* time = JXGetTimeAsString();
+	if (msg == NULL)
+		return JX_FALSE;
 
-	printf("%s[%s] [ERROR] %s >> %s%s\n", JX_OUTPUT_COLOR_RED, time, logger->name, msg, JX_OUTPUT_COLOR_RESET);
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerFatal(JXLogger_p logger, str_c message, ...)
+JXResult JXConsoleLoggerFatal(JXConsoleLogger_p logger, str_c message, ...)
 {
 	if (logger == NULL || message == NULL)
 		return JX_FALSE;
 
 	va_list list;
 	va_start(list, message);
-	char* msg = JXFormatMessage(message, list);
+	char* msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_FATAL, JX_OUTPUT_COLOR_RED, message, list);
 	va_end(list);
 
-	char* time = JXGetTimeAsString();
+	if (msg == NULL)
+		return JX_FALSE;
 
-	printf("%s\033[41m[%s] [FATAL] %s >> %s%s\n", JX_OUTPUT_COLOR_WHITE, time, logger->name, msg, JX_OUTPUT_COLOR_RESET);
+	printf("%s\n", msg);
 
 	return JX_TRUE;
 }
 
-JXResult JXLoggerDestroy(const JXLogger_p logger)
+JXResult JXConsoleLoggerDestroyPointer(const JXConsoleLogger_p logger)
 {
 	free(logger);
 }
