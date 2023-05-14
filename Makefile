@@ -152,6 +152,78 @@ Source/JadeX/Logger.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.s
 .PHONY : Source/JadeX/Logger.c.s
 
+Source/JadeX/Platform/Windows/WindowsFileSystem.obj: Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.obj
+
+# target to build an object file
+Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj
+
+Source/JadeX/Platform/Windows/WindowsFileSystem.i: Source/JadeX/Platform/Windows/WindowsFileSystem.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.i
+
+# target to preprocess a source file
+Source/JadeX/Platform/Windows/WindowsFileSystem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.c.i
+
+Source/JadeX/Platform/Windows/WindowsFileSystem.s: Source/JadeX/Platform/Windows/WindowsFileSystem.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.s
+
+# target to generate assembly for a file
+Source/JadeX/Platform/Windows/WindowsFileSystem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.c.s
+
+Source/JadeX/Platform/Windows/WindowsMemory.obj: Source/JadeX/Platform/Windows/WindowsMemory.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.obj
+
+# target to build an object file
+Source/JadeX/Platform/Windows/WindowsMemory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.c.obj
+
+Source/JadeX/Platform/Windows/WindowsMemory.i: Source/JadeX/Platform/Windows/WindowsMemory.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.i
+
+# target to preprocess a source file
+Source/JadeX/Platform/Windows/WindowsMemory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.c.i
+
+Source/JadeX/Platform/Windows/WindowsMemory.s: Source/JadeX/Platform/Windows/WindowsMemory.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.s
+
+# target to generate assembly for a file
+Source/JadeX/Platform/Windows/WindowsMemory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsMemory.c.s
+
+Source/JadeX/Platform/Windows/WindowsThread.obj: Source/JadeX/Platform/Windows/WindowsThread.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.obj
+
+# target to build an object file
+Source/JadeX/Platform/Windows/WindowsThread.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.c.obj
+
+Source/JadeX/Platform/Windows/WindowsThread.i: Source/JadeX/Platform/Windows/WindowsThread.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.i
+
+# target to preprocess a source file
+Source/JadeX/Platform/Windows/WindowsThread.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.i
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.c.i
+
+Source/JadeX/Platform/Windows/WindowsThread.s: Source/JadeX/Platform/Windows/WindowsThread.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.s
+
+# target to generate assembly for a file
+Source/JadeX/Platform/Windows/WindowsThread.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.s
+.PHONY : Source/JadeX/Platform/Windows/WindowsThread.c.s
+
 Source/Main.obj: Source/Main.c.obj
 .PHONY : Source/Main.obj
 
@@ -188,6 +260,15 @@ help:
 	@echo ... Source/JadeX/Logger.obj
 	@echo ... Source/JadeX/Logger.i
 	@echo ... Source/JadeX/Logger.s
+	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.obj
+	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.i
+	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.s
+	@echo ... Source/JadeX/Platform/Windows/WindowsMemory.obj
+	@echo ... Source/JadeX/Platform/Windows/WindowsMemory.i
+	@echo ... Source/JadeX/Platform/Windows/WindowsMemory.s
+	@echo ... Source/JadeX/Platform/Windows/WindowsThread.obj
+	@echo ... Source/JadeX/Platform/Windows/WindowsThread.i
+	@echo ... Source/JadeX/Platform/Windows/WindowsThread.s
 	@echo ... Source/Main.obj
 	@echo ... Source/Main.i
 	@echo ... Source/Main.s

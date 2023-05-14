@@ -53,7 +53,7 @@ JXResult 			JXConsoleLoggerFatal				(const JXConsoleLogger_p logger, str_c messa
 JXResult			JXConsoleLoggerDestroyPointer		(const JXConsoleLogger_p logger);
 
 JXFileLogger_p		JXFileLoggerAllocPointer			();
-JXResult			JXFileLoggerInitPointer				(JXFileLogger_p logger, str name);
+JXResult			JXFileLoggerInitPointer				(JXFileLogger_p logger, str name, str path);
 JXLogSeverity		JXFileLoggerGetSeverity				(const JXFileLogger_p logger);
 JXResult			JXFileLoggerSetSeverity				(const JXFileLogger_p logger, JXLogSeverity severity);
 JXResult			JXFileLoggerTrace					(const JXFileLogger_p logger, str_c message, ...);

@@ -4,14 +4,17 @@
 #include <stdio.h>
 #include <time.h>
 
-#define JX_OUTPUT_COLOR_RESET		"\033[0m"
+#include "JadeX/System/FileSystem.h"
+
+#define JX_OUTPUT_COLOR_NONE	""
+#define JX_OUTPUT_COLOR_RESET	"\033[0m"
 #define JX_OUTPUT_COLOR_BLACK 	"\033[0;30m"
-#define JX_OUTPUT_COLOR_RED			"\033[0;31m"
+#define JX_OUTPUT_COLOR_RED		"\033[0;31m"
 #define JX_OUTPUT_COLOR_GREEN 	"\033[0;32m"
 #define JX_OUTPUT_COLOR_YELLOW 	"\033[0;33m"
-#define JX_OUTPUT_COLOR_BLUE	 	"\033[0;34m"
-#define JX_OUTPUT_COLOR_PURPLE 	"\033[0;35m"
-#define JX_OUTPUT_COLOR_WHITE		"\033[0;37m"
+#define JX_OUTPUT_COLOR_BLUE	"\033[0;34m"
+#define JX_OUTPUT_COLOR_PURPLE	"\033[0;35m"
+#define JX_OUTPUT_COLOR_WHITE	"\033[0;37m"
 
 str JXFormatMessageArgs(str_c message, va_list args)
 {
@@ -78,7 +81,7 @@ str JXGetLogMessage(JXLoggerData_p data, JXLogSeverity severity, str_c outputCol
 	char* timeStr 		= JXGetTimeAsString		();
 	char* msg			= JXFormatMessageArgs(message, args);	
 
-	return JXFormatMessage("%s[%s] [%s] %s >> %s\033[0m", outputColor, timeStr, data->name, severityStr, msg);
+	return JXFormatMessage("%s[%s] [%s] %s >> %s%s\n", outputColor, timeStr, data->name, severityStr, msg, (outputColor == JX_OUTPUT_COLOR_NONE ? "" : "\033[0m"));
 }
 
 JXConsoleLogger_p JXConsoleLoggerAllocPointer()
@@ -117,7 +120,7 @@ JXResult JXConsoleLoggerTrace(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
@@ -135,7 +138,7 @@ JXResult JXConsoleLoggerInfo(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
@@ -153,7 +156,7 @@ JXResult JXConsoleLoggerDebug(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
@@ -171,7 +174,7 @@ JXResult JXConsoleLoggerWarn(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
@@ -189,7 +192,7 @@ JXResult JXConsoleLoggerError(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
@@ -207,12 +210,165 @@ JXResult JXConsoleLoggerFatal(JXConsoleLogger_p logger, str_c message, ...)
 	if (msg == NULL)
 		return JX_FALSE;
 
-	printf("%s\n", msg);
+	printf("%s", msg);
 
 	return JX_TRUE;
 }
 
 JXResult JXConsoleLoggerDestroyPointer(const JXConsoleLogger_p logger)
+{
+	free(logger);
+	return JX_TRUE;
+}
+
+JXFileLogger_p JXFileLoggerAllocPointer()
+{
+	return malloc(sizeof(JXFileLogger));
+}
+
+JXResult JXFileLoggerInitPointer(JXFileLogger_p logger, str name, str path)
+{
+	logger->data.name = name;
+	logger->data.severity = JX_SEVERITY_ALL;
+	logger->file = path;
+}
+
+JXLogSeverity JXFileLoggerGetSeverity(const JXFileLogger_p logger)
+{
+	return logger->data.severity;
+}
+
+JXResult JXFileLoggerSetSeverity(const JXFileLogger_p logger, JXLogSeverity severity)
+{
+	if (logger == NULL)
+		return JX_FALSE;
+
+	logger->data.severity = severity;
+	
+	return JX_TRUE;
+}
+
+JXResult JXFileLoggerTrace(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_TRACE, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerInfo(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_INFO, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerDebug(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_DEBUG, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerWarn(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_WARNING, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerError(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_ERROR, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerFatal(const JXFileLogger_p logger, str_c message, ...)
+{
+	if (logger == NULL || message == NULL)
+		return JX_FALSE;
+	
+	va_list list;
+	va_start(list, message);
+	str msg = JXGetLogMessage(&(logger->data), JX_SEVERITY_FATAL, JX_OUTPUT_COLOR_NONE, message, list);
+	va_end(list);
+
+	if (msg == NULL)
+		return JX_FALSE;
+	
+	JXFile file = JXFileOpen(logger->file);
+	if (JXFileIsValid(&file))
+		return JXFileWrite(&file, msg);
+
+	return JX_FALSE;
+}
+
+JXResult JXFileLoggerDestroyPointer(const JXFileLogger_p logger)
 {
 	free(logger);
 }

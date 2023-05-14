@@ -7,4 +7,6 @@ CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stddef.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h c:\mingw\include\stdio.h \
  c:\mingw\include\sys/types.h c:\mingw\include\time.h \
- c:\mingw\include\sys\types.h
+ c:\mingw\include\sys\types.h \
+ C:/Engine/JadeX/Include/JadeX/System/FileSystem.h \
+ C:/Engine/JadeX/Include/JadeX/Base.h

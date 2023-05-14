@@ -1,1 +1,1 @@
-CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj CMakeFiles/JadeX.dir/Source/Main.c.obj
+CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj CMakeFiles/JadeX.dir/Source/Main.c.obj

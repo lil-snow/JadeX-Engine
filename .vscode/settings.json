@@ -4,6 +4,7 @@
 		"logger.h": "c",
 		"base.h": "c",
 		"system_error": "c",
-		"ostream": "c"
+		"ostream": "c",
+		"filesystem.h": "c"
 	}
 }
