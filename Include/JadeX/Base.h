@@ -1,6 +1,9 @@
 #ifndef __JX_BASE_H
 #define __JX_BASE_H
 
+#include <stdlib.h>
+#include <stdio.h>
+
 #ifndef JX_TRUE
 #define JX_TRUE 1
 #else
@@ -19,7 +22,11 @@
 #error JX_STRUCT_TYPEDEF may not be redefined
 #endif
 
-#include <stdlib.h>
+#ifndef JX_ASSERT
+#define JX_ASSERT(x) if (!(x)) { printf("[FATAL] Assertion failed %s\n", #x); }
+#else
+#error JX_ASSERT may not be redefined
+#endif
 
 typedef char			i8;
 typedef short			i16;
@@ -38,5 +45,7 @@ typedef char*			str;
 typedef const char*		str_c;
 
 typedef i8				JXResult;
+
+typedef void*			JXHandle;
 
 #endif

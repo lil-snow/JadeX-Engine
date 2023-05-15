@@ -1,23 +1,18 @@
-#include <stdio.h>
 #include <JadeX.h>
-
-void* threadFunc(void* arg) {
-	str_c message = (str_c) arg;
-	JXThreadSleep(2000);
-	printf("Done on side thread\n");
-	return NULL;
-}
 
 int main(char** argc, int argv)
 {
-	JXThread_p thread = JXThreadAllocPointer();
-	str_c message = "Hello from Thread!";
-	JXThreadCreate(thread, threadFunc, (void*)message);
-	JXThreadStart(thread);
+	JXWindowInit();
 
-	JXThreadSleep(1000);
-	printf("Done on main thread\n");
+	JXWindow_p window = JXWindowAllocPointer();
+	JX_ASSERT(JXWindowInitPointer(window, 1920 / 2, 1080 / 2, "JadeX Window"));
+	JX_ASSERT(JXWindowCreate(window));
+	JX_ASSERT(JXWindowShow(window));
 
-	JXThreadJoin(thread);
-	JXThreadDestroy(thread);
+	while (JX_TRUE)	
+	{
+		JX_ASSERT(JXWindowUpdate(window));
+	}
+
+	JX_ASSERT(JXWindowDestroyPointer(window));
 }

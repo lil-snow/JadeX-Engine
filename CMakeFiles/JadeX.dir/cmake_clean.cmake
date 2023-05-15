@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj.d"
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj"
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj.d"
+  "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj"
+  "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj.d"
   "CMakeFiles/JadeX.dir/Source/Main.c.obj"
   "CMakeFiles/JadeX.dir/Source/Main.c.obj.d"
   "JadeX.exe"

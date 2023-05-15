@@ -36,4 +36,5 @@ CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj: \
  c:\mingw\include\olectlid.h c:\mingw\include\oleauto.h \
  c:\mingw\include\oaidl.h c:\mingw\include\oleidl.h \
  C:/Engine/JadeX/Include/JadeX/System/Memory.h \
- C:/Engine/JadeX/Include/JadeX/Base.h
+ C:/Engine/JadeX/Include/JadeX/Base.h c:\mingw\include\stdio.h \
+ c:\mingw\include\sys/types.h

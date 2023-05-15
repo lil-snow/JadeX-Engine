@@ -3,6 +3,8 @@
 
 #include "JadeX/Base.h"
 #include "JadeX/Logger.h"
+#include "JadeX/Window.h"
+
 #include "JadeX/System/FileSystem.h"
 #include "JadeX/System/Thread.h"
 #include "JadeX/System/Memory.h"

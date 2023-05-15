@@ -1,6 +1,6 @@
-CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: \
- C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsFileSystem.c \
- C:/Engine/JadeX/Include/JadeX/System/FileSystem.h \
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj: \
+ C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsWindow.c \
+ C:/Engine/JadeX/Include/JadeX/Window.h \
  C:/Engine/JadeX/Include/JadeX/Base.h c:\mingw\include\stdlib.h \
  c:\mingw\include\_mingw.h c:\mingw\include\msvcrtver.h \
  c:\mingw\include\w32api.h c:\mingw\include\sdkddkver.h \
@@ -36,4 +36,5 @@ CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: \
  c:\mingw\include\ole2.h c:\mingw\include\objbase.h \
  c:\mingw\include\objidl.h c:\mingw\include\cguid.h \
  c:\mingw\include\olectlid.h c:\mingw\include\oleauto.h \
- c:\mingw\include\oaidl.h c:\mingw\include\oleidl.h
+ c:\mingw\include\oaidl.h c:\mingw\include\oleidl.h \
+ C:/Engine/JadeX/Include/JadeX/System/Memory.h

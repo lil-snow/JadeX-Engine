@@ -1,6 +1,5 @@
 #ifdef _WIN32
 
-
 #include "JadeX/System/FileSystem.h"
 #include <Windows.h>
 
