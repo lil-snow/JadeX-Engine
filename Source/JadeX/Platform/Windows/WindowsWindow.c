@@ -48,8 +48,9 @@ JXResult JXWindowInitPointer(JXWindow_p window, u32 width, u32 height, str title
 
 JXResult JXWindowCreate(JXWindow_p window)
 {
-	HWND handle = CreateWindowA(
+	HWND handle = CreateWindowExA(
 		0L,
+		JX_WINDOW_CLASS_NAME,
 		window->data.Title,
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
@@ -68,6 +69,11 @@ JXResult JXWindowCreate(JXWindow_p window)
 JXResult JXWindowShow(JXWindow_p window)
 {
 	return ShowWindow(window->handle, SW_SHOW);
+}
+
+JXResult JXWindowMaximize(JXWindow_p window)
+{
+	return ShowWindow(window->handle, SW_MAXIMIZE);
 }
 
 JXResult JXWindowUpdate(JXWindow_p window)
