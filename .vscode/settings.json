@@ -8,6 +8,7 @@
 		"filesystem.h": "c",
 		"memory.h": "c",
 		"windows.h": "c",
-		"window.h": "c"
+		"window.h": "c",
+		"vector2.h": "c"
 	}
 }

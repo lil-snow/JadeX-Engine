@@ -48,12 +48,8 @@ JXResult JXWindowInitPointer(JXWindow_p window, u32 width, u32 height, str title
 
 JXResult JXWindowCreate(JXWindow_p window)
 {
-<<<<<<< HEAD
-	HWND handle = CreateWindowA(
-=======
 	HWND handle = CreateWindowExA(
 		0L,
->>>>>>> 348f621e7b62412015203dcf7a1fb64b06250f66
 		JX_WINDOW_CLASS_NAME,
 		window->data.Title,
 		WS_OVERLAPPEDWINDOW,

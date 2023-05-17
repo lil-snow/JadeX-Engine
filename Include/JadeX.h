@@ -9,4 +9,6 @@
 #include "JadeX/System/Thread.h"
 #include "JadeX/System/Memory.h"
 
+#include "JadeX/Math/Vector.h"
+
 #endif
