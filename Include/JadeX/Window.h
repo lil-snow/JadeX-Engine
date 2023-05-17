@@ -18,7 +18,7 @@ struct __JXWindow
 	JXWindowData data;
 };
 
-typedef struct __JXWindow JXWindow;
+typedef struct __JXWindow  JXWindow;
 typedef struct __JXWindow* JXWindow_p;
 
 JXResult	JXWindowInit			();

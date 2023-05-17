@@ -49,7 +49,7 @@ JXResult JXWindowInitPointer(JXWindow_p window, u32 width, u32 height, str title
 JXResult JXWindowCreate(JXWindow_p window)
 {
 	HWND handle = CreateWindowA(
-		0L,
+		JX_WINDOW_CLASS_NAME,
 		window->data.Title,
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
@@ -62,12 +62,18 @@ JXResult JXWindowCreate(JXWindow_p window)
 
 	window->handle = handle;
 
-	return window->handle == INVALID_HANDLE_VALUE;
+	return (window->handle != INVALID_HANDLE_VALUE);
 }
 
 JXResult JXWindowShow(JXWindow_p window)
 {
-	return ShowWindow(window->handle, SW_SHOW);
+	i8 res = ShowWindow(window->handle, SW_SHOW);
+
+	int err = GetLastError();
+	if (err != NO_ERROR)
+		printf("Win32 Error: %i", err);
+
+	return res;
 }
 
 JXResult JXWindowUpdate(JXWindow_p window)
