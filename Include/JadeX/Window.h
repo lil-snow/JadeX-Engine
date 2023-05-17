@@ -26,6 +26,7 @@ JXWindow_p 	JXWindowAllocPointer	();
 JXResult	JXWindowInitPointer		(JXWindow_p window, u32 width, u32 height, str title);
 JXResult	JXWindowCreate			(JXWindow_p window);
 JXResult	JXWindowShow			(JXWindow_p window);
+JXResult	JXWindowMaximize		(JXWindow_p window);
 JXResult	JXWindowUpdate			(JXWindow_p window);
 JXResult	JXWindowDestroyPointer	(JXWindow_p window);
 

@@ -23,7 +23,7 @@
 #endif
 
 #ifndef JX_ASSERT
-#define JX_ASSERT(x) if (!(x)) { printf("[FATAL] Assertion failed %s\n", #x); }
+#define JX_ASSERT(x, msg) if (!(x)) { printf("[FATAL] Assertion failed: \"%s\": \n", #x, ##msg); }
 #else
 #error JX_ASSERT may not be redefined
 #endif
