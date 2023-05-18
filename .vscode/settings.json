@@ -10,6 +10,7 @@
 		"windows.h": "c",
 		"window.h": "c",
 		"vector2.h": "c",
-		"math.h": "c"
+		"math.h": "c",
+		"time.h": "c"
 	}
 }

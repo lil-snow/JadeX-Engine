@@ -6,4 +6,5 @@ CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj: \
  c:\mingw\include\w32api.h c:\mingw\include\sdkddkver.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stddef.h c:\mingw\include\stdio.h \
  c:\mingw\include\sys/types.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h c:\mingw\include\time.h \
+ c:\mingw\include\sys\types.h

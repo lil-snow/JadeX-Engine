@@ -1,5 +1,6 @@
 #include "JadeX/Math/Math.h"
 #include <stdlib.h>
+#include <time.h>
 
 f32 JXMin(f32 a, f32 b)
 {
@@ -46,12 +47,19 @@ f32 JXDegrees(f32 radians)
 	return radians * 180 / JX_PI;
 }
 
+static u32 s_Seed = 1;
+
 void JXSeed(u32 seed)
 {
-	srand(seed);
+	s_Seed = seed;
 }
 
 f32 JXRandom()
 {
-	return (((float) rand()) / ((float) RAND_MAX));
+	static const u32 a = 1664525;
+	static const u32 c = 1013904223;
+	static const u32 m = 65537;
+
+	s_Seed = (a * s_Seed + c) % m;
+	return s_Seed / m;
 }
