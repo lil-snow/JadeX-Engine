@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Engine/JadeX/Source/JadeX/Logger.c" "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj.d"
+  "C:/Engine/JadeX/Source/JadeX/Math/Vector.c" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsFileSystem.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsMemory.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsThread.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj.d"
@@ -16,8 +17,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Engine/JadeX/Source/Main.c" "CMakeFiles/JadeX.dir/Source/Main.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/Main.c.obj.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

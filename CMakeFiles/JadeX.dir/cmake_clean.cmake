@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj"
   "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj.d"
+  "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj"
+  "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj.d"
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj"
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj.d"
   "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj"
