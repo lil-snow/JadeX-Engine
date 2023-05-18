@@ -92,25 +92,11 @@ void JXVector3Create(f32 x, f32 y, f32 z, JXVector3_p dest)
 	dest->z = z;
 }
 
-void JXVector3Create2(JXVector2 xy, JXVector3_p dest)
+void JXVector3CreateVector2(JXVector2 xy, f32 z, JXVector3_p dest)
 {
 	dest->x = xy.x;
 	dest->y = xy.y;
-	dest->z = 0.0f;
-}
-
-void JXVector3Create2Z(JXVector2 xy, f32 z, JXVector3_p dest)
-{
-	dest->x = xy.x;
-	dest->y = xy.y;
-	dest->z = z;	
-}
-
-void JXVector3Copy(JXVector3 v, JXVector3_p dest)
-{
-	dest->x = v.x;
-	dest->y = v.y;
-	dest->z = v.z;
+	dest->z = z;
 }
 
 void JXVector3Array(f32* v, JXVector3_p dest)
@@ -118,6 +104,13 @@ void JXVector3Array(f32* v, JXVector3_p dest)
 	dest->x = v[0];
 	dest->y = v[1];
 	dest->z = v[2];
+}
+
+void JXVector3Copy(JXVector3 v, JXVector3_p dest)
+{
+	dest->x = v.x;
+	dest->y = v.y;
+	dest->z = v.z;
 }
 
 void JXVector3Zero(JXVector3_p dest)
@@ -301,7 +294,7 @@ f32 JXVector4Dot(JXVector4 a, JXVector4 b)
 
 f32 JXVector4Length(JXVector4 v)
 {
-	return sqrtf(JXvector4Dot(v, v));
+	return sqrtf(JXVector4Dot(v, v));
 }
 
 void JXVector4Normalize(JXVector4 v, JXVector4_p dest)

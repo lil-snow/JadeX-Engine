@@ -152,6 +152,30 @@ Source/JadeX/Logger.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.s
 .PHONY : Source/JadeX/Logger.c.s
 
+Source/JadeX/Math/Math.obj: Source/JadeX/Math/Math.c.obj
+.PHONY : Source/JadeX/Math/Math.obj
+
+# target to build an object file
+Source/JadeX/Math/Math.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj
+.PHONY : Source/JadeX/Math/Math.c.obj
+
+Source/JadeX/Math/Math.i: Source/JadeX/Math/Math.c.i
+.PHONY : Source/JadeX/Math/Math.i
+
+# target to preprocess a source file
+Source/JadeX/Math/Math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.i
+.PHONY : Source/JadeX/Math/Math.c.i
+
+Source/JadeX/Math/Math.s: Source/JadeX/Math/Math.c.s
+.PHONY : Source/JadeX/Math/Math.s
+
+# target to generate assembly for a file
+Source/JadeX/Math/Math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.s
+.PHONY : Source/JadeX/Math/Math.c.s
+
 Source/JadeX/Math/Vector.obj: Source/JadeX/Math/Vector.c.obj
 .PHONY : Source/JadeX/Math/Vector.obj
 
@@ -175,6 +199,30 @@ Source/JadeX/Math/Vector.s: Source/JadeX/Math/Vector.c.s
 Source/JadeX/Math/Vector.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.s
 .PHONY : Source/JadeX/Math/Vector.c.s
+
+Source/JadeX/Platform/OpenGL/OpenGL.obj: Source/JadeX/Platform/OpenGL/OpenGL.c.obj
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.obj
+
+# target to build an object file
+Source/JadeX/Platform/OpenGL/OpenGL.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.c.obj
+
+Source/JadeX/Platform/OpenGL/OpenGL.i: Source/JadeX/Platform/OpenGL/OpenGL.c.i
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.i
+
+# target to preprocess a source file
+Source/JadeX/Platform/OpenGL/OpenGL.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.i
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.c.i
+
+Source/JadeX/Platform/OpenGL/OpenGL.s: Source/JadeX/Platform/OpenGL/OpenGL.c.s
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.s
+
+# target to generate assembly for a file
+Source/JadeX/Platform/OpenGL/OpenGL.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.s
+.PHONY : Source/JadeX/Platform/OpenGL/OpenGL.c.s
 
 Source/JadeX/Platform/Windows/WindowsFileSystem.obj: Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj
 .PHONY : Source/JadeX/Platform/Windows/WindowsFileSystem.obj
@@ -308,9 +356,15 @@ help:
 	@echo ... Source/JadeX/Logger.obj
 	@echo ... Source/JadeX/Logger.i
 	@echo ... Source/JadeX/Logger.s
+	@echo ... Source/JadeX/Math/Math.obj
+	@echo ... Source/JadeX/Math/Math.i
+	@echo ... Source/JadeX/Math/Math.s
 	@echo ... Source/JadeX/Math/Vector.obj
 	@echo ... Source/JadeX/Math/Vector.i
 	@echo ... Source/JadeX/Math/Vector.s
+	@echo ... Source/JadeX/Platform/OpenGL/OpenGL.obj
+	@echo ... Source/JadeX/Platform/OpenGL/OpenGL.i
+	@echo ... Source/JadeX/Platform/OpenGL/OpenGL.s
 	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.obj
 	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.i
 	@echo ... Source/JadeX/Platform/Windows/WindowsFileSystem.s

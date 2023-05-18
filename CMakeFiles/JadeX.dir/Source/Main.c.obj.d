@@ -13,4 +13,5 @@ CMakeFiles/JadeX.dir/Source/Main.c.obj: C:\Engine\JadeX\Source\Main.c \
  C:/Engine/JadeX/Include/JadeX/System/FileSystem.h \
  C:/Engine/JadeX/Include/JadeX/System/Thread.h \
  C:/Engine/JadeX/Include/JadeX/System/Memory.h \
- C:/Engine/JadeX/Include/JadeX/Math/Vector.h
+ C:/Engine/JadeX/Include/JadeX/Math/Vector.h \
+ C:/Engine/JadeX/Include/JadeX/Math/Math.h

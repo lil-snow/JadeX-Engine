@@ -83,11 +83,26 @@ CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Engine\JadeX\Source\JadeX\Logger.c -o CMakeFiles\JadeX.dir\Source\JadeX\Logger.c.s
 
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj: CMakeFiles/JadeX.dir/flags.make
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj: Source/JadeX/Math/Math.c
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Math\Math.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Math\Math.c.obj -c C:\Engine\JadeX\Source\JadeX\Math\Math.c
+
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Engine\JadeX\Source\JadeX\Math\Math.c > CMakeFiles\JadeX.dir\Source\JadeX\Math\Math.c.i
+
+CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Engine\JadeX\Source\JadeX\Math\Math.c -o CMakeFiles\JadeX.dir\Source\JadeX\Math\Math.c.s
+
 CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj: CMakeFiles/JadeX.dir/flags.make
 CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj: Source/JadeX/Math/Vector.c
 CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Math\Vector.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Math\Vector.c.obj -c C:\Engine\JadeX\Source\JadeX\Math\Vector.c
 
 CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.i: cmake_force
@@ -98,11 +113,26 @@ CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Engine\JadeX\Source\JadeX\Math\Vector.c -o CMakeFiles\JadeX.dir\Source\JadeX\Math\Vector.c.s
 
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj: CMakeFiles/JadeX.dir/flags.make
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj: Source/JadeX/Platform/OpenGL/OpenGL.c
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Platform\OpenGL\OpenGL.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\OpenGL\OpenGL.c.obj -c C:\Engine\JadeX\Source\JadeX\Platform\OpenGL\OpenGL.c
+
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Engine\JadeX\Source\JadeX\Platform\OpenGL\OpenGL.c > CMakeFiles\JadeX.dir\Source\JadeX\Platform\OpenGL\OpenGL.c.i
+
+CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Engine\JadeX\Source\JadeX\Platform\OpenGL\OpenGL.c -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\OpenGL\OpenGL.c.s
+
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: CMakeFiles/JadeX.dir/flags.make
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: Source/JadeX/Platform/Windows/WindowsFileSystem.c
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsFileSystem.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsFileSystem.c.obj -c C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsFileSystem.c
 
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.i: cmake_force
@@ -117,7 +147,7 @@ CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj: CMakeFil
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj: Source/JadeX/Platform/Windows/WindowsMemory.c
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsMemory.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsMemory.c.obj -c C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsMemory.c
 
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.i: cmake_force
@@ -132,7 +162,7 @@ CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj: CMakeFil
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj: Source/JadeX/Platform/Windows/WindowsThread.c
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsThread.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsThread.c.obj -c C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsThread.c
 
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.i: cmake_force
@@ -147,7 +177,7 @@ CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj: CMakeFil
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj: Source/JadeX/Platform/Windows/WindowsWindow.c
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.obj -MF CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsWindow.c.obj.d -o CMakeFiles\JadeX.dir\Source\JadeX\Platform\Windows\WindowsWindow.c.obj -c C:\Engine\JadeX\Source\JadeX\Platform\Windows\WindowsWindow.c
 
 CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsWindow.c.i: cmake_force
@@ -162,7 +192,7 @@ CMakeFiles/JadeX.dir/Source/Main.c.obj: CMakeFiles/JadeX.dir/flags.make
 CMakeFiles/JadeX.dir/Source/Main.c.obj: CMakeFiles/JadeX.dir/includes_C.rsp
 CMakeFiles/JadeX.dir/Source/Main.c.obj: Source/Main.c
 CMakeFiles/JadeX.dir/Source/Main.c.obj: CMakeFiles/JadeX.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/JadeX.dir/Source/Main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/JadeX.dir/Source/Main.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/JadeX.dir/Source/Main.c.obj -MF CMakeFiles\JadeX.dir\Source\Main.c.obj.d -o CMakeFiles\JadeX.dir\Source\Main.c.obj -c C:\Engine\JadeX\Source\Main.c
 
 CMakeFiles/JadeX.dir/Source/Main.c.i: cmake_force
@@ -176,7 +206,9 @@ CMakeFiles/JadeX.dir/Source/Main.c.s: cmake_force
 # Object files for target JadeX
 JadeX_OBJECTS = \
 "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj" \
+"CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj" \
 "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj" \
+"CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj" \
 "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj" \
 "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj" \
 "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj" \
@@ -187,7 +219,9 @@ JadeX_OBJECTS = \
 JadeX_EXTERNAL_OBJECTS =
 
 JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj
+JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj
 JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj
+JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj
 JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj
 JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj
 JadeX.exe: CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj
@@ -197,7 +231,7 @@ JadeX.exe: CMakeFiles/JadeX.dir/build.make
 JadeX.exe: CMakeFiles/JadeX.dir/linkLibs.rsp
 JadeX.exe: CMakeFiles/JadeX.dir/objects1.rsp
 JadeX.exe: CMakeFiles/JadeX.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable JadeX.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable JadeX.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\JadeX.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,32 +3,28 @@
 
 #include "JadeX/Base.h"
 
-#define JXVECTOR2(x, y) ((JXVector2) { ##x, ##y } )
-#define JXVECTOR3(x, y, z) ((JXVector3) { ##x, ##y, ##z } )
-#define JXVECTOR4(x, y, z, w) ((JXVector4) { ##x, ##y, ##z, ##w } )
+struct __JXVector2 	{ f32 x, y; };
+struct __JXVector2d { f64 x, y; };
+struct __JXVector2i { i32 x, y; };
+struct __JXVector2l { i64 x, y; };
 
-struct __JXVector2
-{
-	f32 x, y;
-};
+struct __JXVector3 	{ f32 x, y, z; };
+struct __JXVector3d { f64 x, y, z; };
+struct __JXVector3i { i32 x, y, z; };
+struct __JXVector3l { i64 x, y, z; };
 
-struct __JXVector3
-{
-	f32 x, y, z;
-};
+struct __JXVector4 	{ f32 x, y, z, w; };
+struct __JXVector4d { f64 x, y, z, w; };
+struct __JXVector4i { i32 x, y, z, w; };
+struct __JXVector4l { i64 x, y, z, w; };
 
-struct __JXVector4
-{
-	f32 x, y, z, w;
-};
-
-typedef struct __JXVector2 JXVector2;
+typedef struct __JXVector2 	JXVector2;
 typedef struct __JXVector2* JXVector2_p;
 
-typedef struct __JXVector3 JXVector3;
+typedef struct __JXVector3 	JXVector3;
 typedef struct __JXVector3* JXVector3_p;
 
-typedef struct __JXVector4 JXVector4;
+typedef struct __JXVector4 	JXVector4;
 typedef struct __JXVector4* JXVector4_p;
 
 void 	JXVector2Create			(f32 x, f32 y, JXVector2_p dest);

@@ -80,12 +80,12 @@ clean: CMakeFiles/JadeX.dir/clean
 CMakeFiles/JadeX.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JadeX.dir\build.make CMakeFiles/JadeX.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target JadeX"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Engine\JadeX\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target JadeX"
 .PHONY : CMakeFiles/JadeX.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/JadeX.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Engine\JadeX\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Engine\JadeX\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/JadeX.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Engine\JadeX\CMakeFiles 0
 .PHONY : CMakeFiles/JadeX.dir/rule

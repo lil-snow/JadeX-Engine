@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Engine/JadeX/Source/JadeX/Logger.c" "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Logger.c.obj.d"
+  "C:/Engine/JadeX/Source/JadeX/Math/Math.c" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Math.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Math/Vector.c" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Math/Vector.c.obj.d"
+  "C:/Engine/JadeX/Source/JadeX/Platform/OpenGL/OpenGL.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/OpenGL/OpenGL.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsFileSystem.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsFileSystem.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsMemory.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsMemory.c.obj.d"
   "C:/Engine/JadeX/Source/JadeX/Platform/Windows/WindowsThread.c" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj" "gcc" "CMakeFiles/JadeX.dir/Source/JadeX/Platform/Windows/WindowsThread.c.obj.d"
